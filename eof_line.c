@@ -15,6 +15,7 @@ int main(int argc, char ** argv)
     if (stream == NULL)
     {
         fputs("Failed to access file for streaming.\n", stderr);
+        getchar();
         return -1;
     }
 
@@ -33,6 +34,7 @@ int main(int argc, char ** argv)
         if (character < 0)
         {
             fprintf(stderr, "Unknown negative return value:  %i\n", character);
+            getchar();
             return -3;
         }
         last_character = character;
